@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "${SA_PASSWORD}"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: dbeaver
+    ports:
+      - "8080:8080"
+    environment:
+      CB_ADMIN_NAME: "${DBEAVER_USER}"
+      CB_ADMIN_PASSWORD: "${DBEAVER_PASSWORD}"
+    depends_on:
+      - sqlserver
+
+volumes:
+  sqlserver_data:
+    driver: local
