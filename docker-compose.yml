@@ -11,18 +11,26 @@ services:
       - "1433:1433"
     volumes:
       - sqlserver_data:/var/opt/mssql
-
+    networks:
+      - sql-network
+    
   dbeaver:
     image: dbeaver/cloudbeaver:latest
     container_name: dbeaver
     ports:
-      - "8080:8080"
+      - "8080:8978"
     environment:
       CB_ADMIN_NAME: "${DBEAVER_USER}"
       CB_ADMIN_PASSWORD: "${DBEAVER_PASSWORD}"
     depends_on:
       - sqlserver
+    networks:
+      - sql-network
 
 volumes:
   sqlserver_data:
     driver: local
+
+networks:
+  sql-network:
+    driver: bridge
