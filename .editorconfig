@@ -1,0 +1,43 @@
+root = true
+
+# Configuración global
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# Java configuraciones específicas
+[*.java]
+indent_size = 4
+max_line_length = 120
+
+# XML configuraciones específicas
+[*.xml]
+indent_size = 4
+max_line_length = 120
+
+# YAML configuraciones específicas
+[*.yml, *.yaml]
+indent_size = 2
+
+# Archivos de propiedades específicas
+[*.properties]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# Archivos SQL específicos
+[*.sql]
+indent_size = 4
+
+# Archivos JSON específicos
+[*.json]
+indent_size = 2
+
+# Markdown configuraciones específicas
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
