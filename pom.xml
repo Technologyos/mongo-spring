@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.technologyos</groupId>
-    <artifactId>technologyos-workspace</artifactId>
+    <artifactId>sql-server-workspace</artifactId>
     <packaging>pom</packaging>
-    <name>technologyos-workspace</name>
+    <name>sql-server-workspace</name>
     <version>1.0-SNAPSHOT</version>
 
 

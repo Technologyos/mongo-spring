@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>com.technologyos</groupId>
-        <artifactId>technologyos-workspace</artifactId>
+        <artifactId>sql-server-workspace</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.technologyos.infrastructure</groupId>
-    <artifactId>infrastructure</artifactId>
+    <groupId>com.technologyos.business</groupId>
+    <artifactId>business</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
